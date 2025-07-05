@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Diabetes Prediction</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 flex items-center justify-center min-h-screen">
+  <div class="bg-white shadow-lg rounded-lg p-8 max-w-md w-full">
+    <h1 class="text-2xl font-bold mb-6 text-center text-blue-700">🩺 Diabetes Prediction</h1>
+    <form id="predictionForm" class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium">Gender</label>
+        <select id="gender" class="w-full border border-gray-300 rounded px-3 py-2">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <div id="pregnancies-group">
+        <label class="block text-sm font-medium">Pregnancies</label>
+        <input type="number" id="pregnancies" value="0" min="0" class="w-full border border-gray-300 rounded px-3 py-2">
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium">Glucose</label>
+        <input type="number" id="glucose" value="120" class="w-full border border-gray-300 rounded px-3 py-2">
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Blood Pressure</label>
+        <input type="number" id="blood_pressure" value="70" class="w-full border border-gray-300 rounded px-3 py-2">
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Skin Thickness</label>
+        <input type="number" id="skin_thickness" value="20" class="w-full border border-gray-300 rounded px-3 py-2">
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Insulin</label>
+        <input type="number" id="insulin" value="80" class="w-full border border-gray-300 rounded px-3 py-2">
+      </div>
+      <div>
+        <label class="block text-sm font-medium">BMI</label>
+        <input type="number" id="bmi" value="25.0" step="0.1" class="w-full border border-gray-300 rounded px-3 py-2">
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Diabetes Pedigree Function</label>
+        <input type="number" id="diabetes_pedigree" value="0.5" step="0.01"
+          class="w-full border border-gray-300 rounded px-3 py-2">
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Age</label>
+        <input type="number" id="age" value="30" class="w-full border border-gray-300 rounded px-3 py-2">
+      </div>
+
+      <button type="submit"
+        class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">Predict</button>
+    </form>
+
+    <div id="result" class="mt-6 text-center text-lg font-semibold"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
